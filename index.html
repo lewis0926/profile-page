@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="shortcut icon" href="./images/favicon.ico" />
+    <meta
+      name="keyword"
+      content="Lewis Shum, portfolio, typescript, software engineer"
+    />
+    <meta
+      name="description"
+      content="A Software Engineer with a passion in solving complex problems."
+    />
+    <meta property="og:title" content="Lewis Shum | Full Stack Software Engineer" />
+    <meta
+      property="og:description"
+      content="A Software Engineer with a passion in solving complex problems."
+    />
+    <meta
+      property="og:image"
+      content="https://github.com/lewis0926.png"
+    />
+    <meta
+      property="og:url"
+      content="https://github.com/lewis0926"
+    />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script defer src="script.js"></script>
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"
+      data-auto-a11y="true"
+    ></script>
+    <script defer src="https://friconix.com/cdn/friconix.js"></script>
+    <script
+      defer
+      src="https://code.iconify.design/1/1.0.7/iconify.min.js"
+    ></script>
+    <title>Lewis Shum | Portfolio</title>
+  </head>
+  <body>
+    <!-- BACK TO TOP BUTTON -->
+    <button id="back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- HEADER -->
+    <header id="home">
+      <nav id="nav" aria-label="Main menu">
+        <div class="logo">
+          <h3>Lewis <span>Shum</span></h3>
+        </div>
+
+        <ul class="links">
+          <li>
+            <a href="#home" class="link"><i class="fas fa-home"></i> Home</a>
+          </li>
+          <li>
+            <a href="#about" class="link"><i class="fas fa-user"></i> About</a>
+          </li>
+          <li>
+            <a href="#skills" class="link"
+              ><i class="fas fa-tools"></i> Skills</a
+            >
+          </li>
+          <li>
+            <a href="#projects" class="link"
+              ><i class="fab fa-codepen"></i> Projects</a
+            >
+          </li>
+          <li>
+            <!-- DARK MODE TOGGLE -->
+            <div class="color-toggle-container">
+              <input type="checkbox" id="color-toggle-input" />
+              <label for="color-toggle-input" class="color-toggle-label">
+                <div class="color-toggle"></div>
+              </label>
+            </div>
+          </li>
+        </ul>
+
+        <div class="hamburger-menu" id="hamburger-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+
+      <!-- HERO SECTION -->
+      <div class="hero">
+        <h1 class="h1">Hi, I'm a <span class="animate"></span></h1>
+        <p class="student" id="student">
+          Full Stack Software Engineer passionate in solving complex problems.
+        </p>
+        <div class="hero-btns">
+          <a href="#about" class="about" id="about-btn">About me</a>
+          <a href="#projects" class="projects-btn" id="projects-btn"
+            >Projects</a
+          >
+        </div>
+      </div>
+
+      <!-- SOCIAL LINKS -->
+      <div class="socials" id="socials">
+        <ul>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/lewis-wang-yin-shum-6b4890162/"
+              target="_blank"
+              class="linkedin"
+              aria-label="LinkedIn"
+              rel="noopener"
+              >LinkedIn<i class="fi-snsuxl-linkedin"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/lewis0926"
+              target="_blank"
+              class="github"
+              aria-label="GitHub"
+              rel="noopener"
+              >GitHub<i class="fi-snsuxl-github-alt"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="mailto:lewisshum.work@gmail.com"
+              target="_blank"
+              class="email"
+              aria-label="Email"
+              rel="noopener"
+              >Email<i class="fi-xwsuxl-envelope-solid"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <!-- ABOUT ME -->
+      <section id="about">
+        <div class="container-about">
+          <div class="about-me" id="about-me">
+            <h2><span>About</span> Me</h2>
+            <p>
+              Hello! I'm a Toronto-based software engineer with a passion for problem-solving and a track record of
+              building functional, secure, and scalable applications. I take pride in contributing to the success of
+              projects, such as the super insurance agent app with over 2 million users worldwide. In addition to my
+              coding expertise, I'm a team player who enjoys collaborating to overcome challenges. When I'm not coding,
+              you'll find me on the basketball court, immersed in video games, or exploring the rich tapestry of
+              Japanese culture. Ready to explore my projects or discuss potential collaborations? Feel free to contact
+              me!
+            </p>
+          </div>
+          <div class="student-img">
+            <img
+              src="./images/hello.svg"
+              height="250px"
+              width="350px"
+              alt="guy with laptop on a desk"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills">
+        <div class="header">
+          <h2>My <span>Skills</span></h2>
+        </div>
+
+        <div class="container lazy-background" id="container">
+          <div class="languages">
+            <p><i class="fas fa-code"></i></p>
+            <h3>Languages</h3>
+            <span
+            >HTML
+              <span
+                class="iconify"
+                data-icon="logos:html-5"
+                data-inline="false"
+              ></span
+              ></span>
+            <br />
+            <span
+            >CSS/SASS
+              <span
+                class="iconify"
+                data-icon="logos:css-3"
+                data-inline="false"
+              ></span>
+              <span
+                class="iconify"
+                data-icon="logos:sass"
+                data-inline="false"
+              ></span
+              ></span>
+            <br />
+            <span
+              >TypeScript
+              <span
+                class="iconify"
+                data-icon="logos-typescript-icon"
+                data-inline="false"
+              ></span
+            ></span>
+            <br />
+            <span
+            >JavaScript
+              <span
+                      class="iconify"
+                      data-icon="logos:javascript"
+                      data-inline="false"
+              ></span>
+            </span>
+            <br />
+            <span
+              >Python
+              <span
+                class="iconify"
+                data-icon="logos:python"
+                data-inline="false"
+              ></span
+            ></span>
+            <br />
+            <span
+              >Java
+              <span
+                class="iconify"
+                data-icon="logos:java">
+              </span
+            ></span>
+            <br />
+            <span
+            >C#
+              <span
+                class="iconify"
+                data-icon="devicon:csharp">
+              </span
+              ></span>
+            <br />
+            <span
+              >SQL
+              <span
+                class="iconify"
+                data-icon="vscode-icons:file-type-sql"
+              ></span
+            ></span>
+            <br />
+            <span
+            >Linux/Bash
+              <span
+                class="iconify"
+                data-icon="mdi:bash"
+              ></span
+              ></span>
+          </div>
+
+          <div class="frameworks">
+            <p><i class="fas fa-book-reader"></i></p>
+            <h3>Frameworks/Libraries/Databases</h3>
+            <span
+              >React.js
+              <span
+                class="iconify"
+                data-icon="logos:react"
+                data-inline="false"
+              ></span
+            ></span>
+            <br />
+            <span
+              >Node.js
+              <span
+                class="iconify"
+                data-icon="logos:nodejs-icon"
+                data-inline="false"
+              ></span>
+            </span>
+            <br />
+            <span
+            >Express.js/Nest.js
+              <span
+                class="iconify"
+                data-icon="simple-icons:express"
+                data-inline="false"
+              ></span>
+                <span
+                  class="iconify"
+                  data-icon="logos:nestjs"
+                  data-inline="false"
+                ></span>
+            </span>
+            <br />
+            <span
+            >Spring Boot
+              <span
+                class="iconify"
+                data-icon="devicon:spring"
+                data-inline="false"
+              ></span>
+            </span>
+            <br />
+            <span
+            >Flask
+              <span
+                class="iconify"
+                data-icon="simple-icons:flask"
+                data-inline="false"
+              ></span>
+            </span>
+            <br />
+            <span
+              >MongoDB
+              <span
+                class="iconify"
+                data-icon="vscode-icons:file-type-mongo"
+              ></span
+            ></span>
+            <br />
+            <span
+            >PostgresSQL
+              <span
+                class="iconify"
+                data-icon="logos:postgresql"
+              ></span
+              ></span>
+            <br />
+            <span
+            >MySQL
+              <span
+                class="iconify"
+                data-icon="logos:mysql"
+              ></span
+              ></span>
+            <br />
+            <span
+            >Redis
+              <span
+                class="iconify"
+                data-icon="logos:redis"
+              ></span
+              ></span>
+            <br />
+            <span
+              >Tailwind
+              <span
+                class="iconify"
+                data-icon="vscode-icons:file-type-tailwind"
+              ></span>
+            </span>
+          </div>
+
+          <div class="technologies">
+            <p><i class="fas fa-tools"></i></p>
+            <h3>Technologies</h3>
+            <span
+              >Git
+              <span
+                class="iconify"
+                data-icon="logos:git-icon"
+                data-inline="false"
+              ></span
+            ></span>
+            <br />
+            <span
+            >Bitbucket
+              <span
+                class="iconify"
+                data-icon="devicon:bitbucket-wordmark"
+                data-inline="false"
+              ></span
+              ></span>
+            <br />
+            <span
+            >Jira
+              <span
+                      class="iconify"
+                      data-icon="logos:jira"
+                      data-inline="false"
+              ></span
+              ></span>
+            <br />
+            <span
+            >Confluence
+              <span
+                      class="iconify"
+                      data-icon="logos:confluence"
+                      data-inline="false"
+              ></span
+              ></span>
+            <br />
+            <span
+            >Docker
+              <span
+                class="iconify"
+                data-icon="logos:docker-icon"
+                data-inline="false"
+              ></span
+              ></span>
+            <br />
+            <span
+            >Kubernetes
+              <span
+                class="iconify"
+                data-icon="logos:kubernetes"
+                data-inline="false"
+              ></span
+              ></span>
+            <br />
+            <span
+            >Jenkins
+              <span
+                class="iconify"
+                data-icon="devicon:jenkins"
+                data-inline="false"
+              ></span
+              ></span>
+            <br />
+            <span
+            >AWS
+              <span
+                class="iconify"
+                data-icon="skill-icons:aws-light"
+                data-inline="false"
+              ></span
+              ></span>
+            <br />
+            <span
+            >Azure
+              <span
+                class="iconify"
+                data-icon="skill-icons:azure-light"
+                data-inline="false"
+              ></span
+              ></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECT SHOWCASE -->
+      <section id="projects">
+        <div class="header" id="header">
+          <h2>My <span>Projects</span></h2>
+        </div>
+
+        <div class="container reveal lazy-background">
+          <div class="card lazy-background">
+            <div class="card-img card1"></div>
+            <div class="card-text">
+              <h2>Blog App</h2>
+              <p>A simple blog built with React with a simple json server.</p>
+              <br />
+              <p class="made-with">
+                Made with:
+                <span
+                  class="iconify"
+                  data-icon="logos-typescript-icon"
+                  data-inline="false"
+                ></span>
+                <span
+                  class="iconify"
+                  data-icon="logos:react"
+                  data-inline="false"
+                ></span>
+                <span
+                  class="iconify"
+                  data-icon="logos:docker-icon"
+                  data-inline="false"
+                ></span>
+              </p>
+              <br />
+              <p>Nov 2023</p>
+            </div>
+            <div class="card-buttons">
+<!--              <a-->
+<!--                      href=""-->
+<!--                      target="_blank"-->
+<!--                      class="demo"-->
+<!--              ><i class="far fa-eye"></i> Demo</a-->
+<!--              >-->
+              <a
+                href="https://github.com/lewis0926/lewis-blog-app"
+                target="_blank"
+                class="code"
+                ><i class="fas fa-code"></i> Code</a
+              >
+            </div>
+          </div>
+
+          <div class="card lazy-background">
+            <div class="card-img card2"></div>
+            <div class="card-text">
+              <h2>Goal Setter</h2>
+              <p>A simple goal setter app with JWT authentication built with Node.js, React.js and MongoDB.</p>
+              <br />
+              <p class="made-with">
+                Made with:
+                <span
+                  class="iconify"
+                  data-icon="logos:nodejs-icon"
+                  data-inline="false"
+                ></span>
+                <span
+                  class="iconify"
+                  data-icon="simple-icons:express"
+                  data-inline="false"
+                ></span>
+                <span
+                  class="iconify"
+                  data-icon="logos:react"
+                  data-inline="false"
+                ></span>
+                <span
+                  class="iconify"
+                  data-icon="vscode-icons:file-type-mongo"
+                ></span>
+                <span
+                  class="iconify"
+                  data-icon="logos:javascript"
+                ></span>
+              </p>
+              <br />
+              <p>Jul 2022</p>
+            </div>
+            <div class="card-buttons">
+<!--              <a-->
+<!--                href=""-->
+<!--                target="_blank"-->
+<!--                class="demo"-->
+<!--                ><i class="far fa-eye"></i> Demo</a-->
+<!--              >-->
+              <a
+                href="https://github.com/lewis0926/lewismernapp"
+                target="_blank"
+                class="code"
+                ><i class="fas fa-code"></i> Code</a
+              >
+            </div>
+          </div>
+          <div class="card lazy-background">
+            <div class="card-img card3"></div>
+            <div class="card-text">
+              <h2>Fan Page</h2>
+              <p>A fan page with a purchase cart, written in HTML, CSS, and JavaScript.</p>
+              <br />
+              <p class="made-with">
+                Made with:
+                <span
+                  class="iconify"
+                  data-icon="logos:html-5"
+                  data-inline="false"
+                ></span>
+                <span
+                  class="iconify"
+                  data-icon="logos:css-3"
+                  data-inline="false"
+                ></span>
+                <span
+                  class="iconify"
+                  data-icon="logos-javascript"
+                  data-inline="false"
+                ></span>
+              </p>
+              <br />
+              <p>Sep 2021</p>
+            </div>
+            <div class="card-buttons">
+              <!--              <a-->
+              <!--                href=""-->
+              <!--                target="_blank"-->
+              <!--                class="demo"-->
+              <!--                ><i class="far fa-eye"></i> Demo</a-->
+              <!--              >-->
+              <a
+                href="https://github.com/lewis0926/fan-page"
+                target="_blank"
+                class="code"
+              ><i class="fas fa-code"></i> Code</a
+              >
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>

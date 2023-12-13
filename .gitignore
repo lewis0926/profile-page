@@ -1,0 +1,4 @@
+/node_modules
+.nojekyll
+.well-known
+.idea
