@@ -370,7 +370,7 @@ header {
     }
     div {
       background: var(--card-background);
-      height: 30rem;
+      height: 31rem;
       width: 18rem;
       padding: 1rem;
       margin: 1.5rem;
@@ -437,7 +437,7 @@ header {
     .card {
       display: grid;
       grid-template-columns: 20rem;
-      grid-template-rows: 13rem 16rem 4rem;
+      grid-template-rows: 15rem 18rem 5rem;
       grid-template-areas: "image" "text" "buttons";
       border-radius: 19px;
       background: var(--dark-gray);
@@ -491,13 +491,16 @@ header {
       }
     }
     .card1 {
-      background: url(../images/simple-blog-app.png);
-    }
+      background: url(../images/fan-page.png);
+         }
     .card2 {
       background: url(../images/goal-setter.png);
     }
     .card3 {
-      background: url(../images/fan-page.png);
+      background: url(../images/simple-blog-app.png);
+    }
+    .card4 {
+      background: url(../images/to-do-app.png);
     }
   }
 }
@@ -670,7 +673,7 @@ header {
     .container {
       #card {
         grid-template-columns: 15rem;
-        grid-template-rows: 10rem 12rem 3rem;
+        grid-template-rows: 15rem 18rem 5rem;
         .card-text {
           h2 {
             font-size: 1rem;
