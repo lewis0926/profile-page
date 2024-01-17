@@ -437,7 +437,7 @@ header {
     .card {
       display: grid;
       grid-template-columns: 20rem;
-      grid-template-rows: 15rem 18rem 5rem;
+      grid-template-rows: 24rem 28rem 5rem;
       grid-template-areas: "image" "text" "buttons";
       border-radius: 19px;
       background: var(--dark-gray);
@@ -501,6 +501,9 @@ header {
     }
     .card4 {
       background: url(../images/to-do-app.png);
+    }
+    .card5 {
+      background: url(../images/stylesync.png);
     }
   }
 }
