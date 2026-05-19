@@ -20,6 +20,7 @@ echo ""
 
 RENDERED="$(envsubst '${IMAGE}${INGRESS_HOST}' < "$YAML")"
 
+ssh "$REMOTE" "mkdir -p $REMOTE_DIR"
 echo "$RENDERED" | ssh "$REMOTE" "cat > $REMOTE_DIR/deploy.yaml"
 echo "Uploaded deploy.yaml → $REMOTE:$REMOTE_DIR/deploy.yaml"
 

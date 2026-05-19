@@ -1,28 +1,31 @@
-# Portfolio Page
+# Lewis Shum — Portfolio
 
-Welcome to my personal portfolio! This page serves as a showcase for my programming projects, providing an overview of my skills and experiences in the world of software development.
+Personal portfolio site.
 
-## Installation
-
-1. Clone the repository.
-2. Open `index.html` in your preferred web browser.
-
-## Usage
-
-Explore the various sections of the portfolio to discover details about my projects.
+Live at: [lewisshum.com](https://lewisshum.com)
 
 ## Tech Stack
 
-- **HTML:** Used for structuring the content of the portfolio.
-- **SCSS/CSS:** Styling to enhance the visual appeal and user experience.
-- **JavaScript:** Adding interactivity and dynamic features.
+- **HTML / CSS / JavaScript** — no framework, no build step
+- **Typed.js** — hero typing animation
+- **Iconify** — tech stack icons
+- **Font Awesome** — UI icons
+- **nginx** — static file serving
 
-## Demo
+## Deployment
 
-![Project Demo](images/demo.gif)
+Containerised with Docker and deployed to k3s via GitHub Actions on every push to `main`.
+
+```bash
+# Build image locally
+docker build -t profile-page .
+
+# Deploy to k3s (uses tag from GHCR)
+./deploy/deploy.sh              # latest
+./deploy/deploy.sh <tag>        # specific commit
+```
 
 ## Contact
 
-Feel free to connect with me:
 - Email: lewisshum.work@gmail.com
-- LinkedIn: https://www.linkedin.com/in/lewis-wang-yin-shum-6b4890162/
+- LinkedIn: https://www.linkedin.com/in/lewis-shum/
