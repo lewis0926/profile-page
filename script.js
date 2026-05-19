@@ -1,122 +1,101 @@
-const backToTopButton = document.getElementById("back-to-top");
-const colorToggle = document.getElementById("color-toggle-input");
-
-// Typing effect with typed.js
-const typed = new Typed(".animate", {
-  strings: ["software engineer.", "game lover.", "basketball player."],
-  typeSpeed: 100,
-  backSpeed: 100,
-  loop: true,
-});
-
-// Make navbar fixed
-function stickyNav() {
-  const nav = document.querySelector("nav");
-  nav.classList.toggle("fixed", window.scrollY > 0);
-}
-
-// Lazy load background images
-document.addEventListener("DOMContentLoaded", function () {
-  const lazyBackgrounds = [].slice.call(
-    document.querySelectorAll(".lazy-background")
-  );
-
-  if ("IntersectionObserver" in window) {
-    let lazyBackgroundObserver = new IntersectionObserver(function (
-      entries,
-      _
-    ) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          lazyBackgroundObserver.unobserve(entry.target);
-        }
-      });
-    });
-
-    lazyBackgrounds.forEach(function (lazyBackground) {
-      lazyBackgroundObserver.observe(lazyBackground);
+// Typed.js animation — guard in case CDN is slow
+document.addEventListener('DOMContentLoaded', () => {
+  if (typeof Typed !== 'undefined') {
+    new Typed('.typed-target', {
+      strings: ['Software Engineer.', 'Game Lover.', 'Basketball Player.'],
+      typeSpeed: 70,
+      backSpeed: 50,
+      backDelay: 1800,
+      loop: true,
     });
   }
 });
 
-// Reveal projects
-function revealProjects() {
-  const reveal = document.querySelector(".reveal");
+// Sticky nav
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 20);
+  updateBackToTop();
+  revealOnScroll();
+}, { passive: true });
 
-  const windowHeight = window.innerHeight;
-  const revealTop = reveal.getBoundingClientRect().top;
-  const revealPoint = 150;
+// Hamburger / mobile menu
+const hamburger  = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
 
-  if (revealTop < windowHeight - revealPoint) {
-    reveal.classList.add("active");
-  }
-}
+hamburger.addEventListener('click', () => {
+  const open = hamburger.classList.toggle('open');
+  mobileMenu.classList.toggle('open', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+});
 
-// Mobile hamburger-menu
-function navSlider() {
-  const burgerMenu = document.querySelector(".hamburger-menu");
-  const nav = document.querySelector(".links");
-  const links = document.querySelectorAll(".links li");
+mobileMenu.querySelectorAll('.mobile-link').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
+  });
+});
 
-  burgerMenu.addEventListener("click", () => {
-    nav.classList.toggle("nav-active");
-
-    links.forEach((link, index) => {
-      if (link.style.animation) link.style.animation = "";
-      else {
-        link.style.animation = `linkFade 0.4s ease forwards ${
-          index / 7 + 0.5
-        }s`;
-      }
-    });
-    burgerMenu.classList.toggle("toggle");
+// Scroll reveal
+function revealOnScroll() {
+  document.querySelectorAll('.reveal:not(.active)').forEach(el => {
+    if (el.getBoundingClientRect().top < window.innerHeight - 60) {
+      el.classList.add('active');
+    }
   });
 }
-navSlider();
 
-// Button entrance and exit
-function scrollDownFunction() {
-  if (window.pageYOffset > 1800) {
-    // Show backToTopButton
-    if (!backToTopButton.classList.contains("btn-entrance")) {
-      backToTopButton.classList.remove("btn-exit");
-      backToTopButton.classList.add("btn-entrance");
-      backToTopButton.style.display = "block";
-    }
-  } else {
-    // Hide backToTopButton
-    if (backToTopButton.classList.contains("btn-entrance")) {
-      backToTopButton.classList.remove("btn-entrance");
-      backToTopButton.classList.add("btn-exit");
-      setTimeout(() => {
-        backToTopButton.style.display = "none";
-      }, 250);
-    }
+// Run reveal on load and after a short delay to catch any layout settling
+window.addEventListener('load', () => {
+  revealOnScroll();
+  setTimeout(revealOnScroll, 150);
+});
+revealOnScroll();
+
+// Back to top
+const backToTopBtn = document.getElementById('back-to-top');
+
+function updateBackToTop() {
+  const show        = window.scrollY > 700;
+  const hasEntrance = backToTopBtn.classList.contains('btn-entrance');
+
+  if (show && !hasEntrance) {
+    backToTopBtn.classList.remove('btn-exit');
+    backToTopBtn.classList.add('btn-entrance');
+    backToTopBtn.style.display = 'block';
+  } else if (!show && hasEntrance) {
+    backToTopBtn.classList.remove('btn-entrance');
+    backToTopBtn.classList.add('btn-exit');
+    setTimeout(() => { backToTopBtn.style.display = 'none'; }, 250);
   }
 }
 
-// Back to top button
-function backToTop() {
-  window.scrollTo(0, 0);
-}
+backToTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 
-// Toggle dark mode
-function checkMode() {
-  if (colorToggle.checked) darkModeOn();
-  else darkModeOff();
-}
+// Footer year
+const yearEl = document.getElementById('footer-year');
+if (yearEl) yearEl.textContent = `© ${new Date().getFullYear()}`;
 
-function darkModeOn() {
-  document.body.classList.add("light-mode");
-}
+// Stack icon tooltips
+const tooltip = document.createElement('div');
+tooltip.id = 'tooltip';
+document.body.appendChild(tooltip);
 
-function darkModeOff() {
-  document.body.classList.remove("light-mode");
-}
-
-window.addEventListener("scroll", stickyNav);
-window.addEventListener("scroll", revealProjects);
-window.addEventListener("scroll", scrollDownFunction);
-backToTopButton.addEventListener("click", backToTop);
-colorToggle.addEventListener("click", checkMode);
+document.querySelectorAll('.tip').forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    const rect = el.getBoundingClientRect();
+    tooltip.textContent = el.dataset.tooltip;
+    tooltip.style.opacity = '0';
+    tooltip.style.display = 'block';
+    const tw = tooltip.offsetWidth;
+    tooltip.style.left = `${rect.left + rect.width / 2 - tw / 2}px`;
+    tooltip.style.top  = `${rect.top - tooltip.offsetHeight - 7}px`;
+    tooltip.style.opacity = '1';
+  });
+  el.addEventListener('mouseleave', () => {
+    tooltip.style.opacity = '0';
+  });
+});
