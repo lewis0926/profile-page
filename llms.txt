@@ -1,0 +1,24 @@
+# Lewis Shum
+
+> Full Stack Software Engineer based in Toronto, building functional, secure, and scalable applications that solve real-world problems.
+
+## About
+
+Lewis Shum is a Toronto-based software engineer experienced in building everything from large-scale insurance platforms (2M+ worldwide users) to fast-moving startup products. He embraces AI-assisted development workflows and focuses on code quality, security, and scalability.
+
+- Languages: TypeScript, Python, C#, Swift
+- Frameworks: React, Next.js, NestJS, Node.js, Express, React Native, Expo, Tailwind CSS
+- Databases: PostgreSQL, MySQL, MongoDB, Redis, Firebase
+- DevOps: AWS (EC2, ECS, ECR, RDS, S3, CloudFront, Route 53, Secrets Manager), Docker, Kubernetes, GitHub Actions, Cloudflare, Vercel
+
+## Projects
+
+- [Trend Radar](https://trend-radar.lewisshum.com): Real-time financial dashboard ranking 12 market sectors by momentum, with candlestick charts and live data across US indices, global markets, and commodities. Stack: TypeScript, React, Python, FastAPI, Docker, GitHub Actions.
+- [Drawvaltine](https://drawvaltine.com): Art portfolio site with a headless CMS giving the artist full control over content and media. Stack: Next.js, Payload CMS, PostgreSQL (Neon), Vercel Blob, Vercel.
+
+## Contact
+
+- Email: lewisshum.work@gmail.com
+- GitHub: https://github.com/lewis0926
+- LinkedIn: https://www.linkedin.com/in/lewis-shum/
+- Site: https://lewisshum.com
