@@ -7,7 +7,7 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 YAML="$SCRIPT_DIR/deploy.yaml"
 REMOTE="k3s-oracle-cloud"
-REMOTE_DIR="/home/ubuntu/profile-page"
+REMOTE_DIR="/home/ubuntu/apps/profile-page"
 OWNER="lewis0926"
 
 TAG="${1:-latest}"

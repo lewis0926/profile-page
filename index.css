@@ -577,8 +577,9 @@ section { padding: 7rem 0; }
   background: linear-gradient(to bottom, transparent 55%, var(--bg-card) 100%);
 }
 
-.card-radar       { background-image: url('images/trend-radar.png'); }
-.card-drawvaltine { background-image: url('images/drawvaltine.png'); }
+.card-radar       { background-image: url('images/trend-radar.png'); background-position: center top; }
+.card-drawvaltine { background-image: url('images/drawvaltine.png'); background-position: center top; }
+.card-settl       { background-image: url('images/settl.png'); background-position: center top; }
 
 .project-body {
   padding: 1.4rem;
